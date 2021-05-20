@@ -1,8 +1,8 @@
 .Home {
-  height: 100vh;
-  justify-content: center;
+
   width: 80%;
-  align-items: center;
+  margin-left: 10%;
+  text-align: center;
 }
 
 .Searchbar {
@@ -12,7 +12,6 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 30px;
-  margin-left: 20%;
   border-radius: 15px;
   margin-top: -50px;
 }
@@ -26,4 +25,32 @@
 
 .search__button {
   margin-left: 30px;
+}
+
+.Job_Card {
+  height: 250px;
+  width: 400px;
+  margin-bottom: 80px;
+}
+
+.Jobposts {
+  margin-top: 120px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Jobposts__img {
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: -50px;
+  margin-left: 30px;
+}
+
+.Jobposts__desc {
+  margin: 20px 0px 0px 20px;
 }
