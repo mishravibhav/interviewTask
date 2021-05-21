@@ -7,7 +7,7 @@ import RoomIcon from "@material-ui/icons/Room";
 import { Link } from "react-router-dom";
 
 function Home(props) {
-    console.log(props);
+    // console.log(props);
 
   const [Data, setData] = useState([]);
   const [Search, setSearch] = useState("");
@@ -17,7 +17,7 @@ function Home(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(Search, Location, type);
+    // console.log(Search, Location, type);
 
     const fetchData = async () => {
       const response = await Axios.get(
@@ -67,7 +67,7 @@ function Home(props) {
 
     fetchData();
   }, []);
-  console.log(Data);
+  // console.log(Data);
   return (
     <div className="Home">
       <form

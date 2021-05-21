@@ -4,6 +4,10 @@
     /* color: whitesmoke; */
 }
 
+.Light__mode{
+  background-color: whitesmoke;
+}
+
 .Navbar {
     height: 25vh;
     background-color: #9400D3  ;

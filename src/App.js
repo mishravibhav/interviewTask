@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Home from "./Components/Home";
 import JobDesc from "./Components/JobDesc";
-import { NavItem } from "react-bootstrap";
 import axios from "axios";
 
 function App() {
   const [dark, setDark] = useState(false);
-  const [Data,setData] =  useState([])
+  const [Data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,8 +29,9 @@ function App() {
       <div className={dark ? "App dark__mode" : "App"}>
         <div className="Navbar">
           <div className="Navbar__Items">
-            <Link to="/"><div className="Logo">devjobs</div></Link>
-            
+            <Link to="/">
+              <div className="Logo">devjobs</div>
+            </Link>
 
             <div className="theme__button">
               <label class="switch">
@@ -48,7 +48,7 @@ function App() {
           </Route>
 
           <Route path="/Jobdesc">
-            <JobDesc props={Data}  />
+            <JobDesc props={Data} />
           </Route>
         </Switch>
       </div>
