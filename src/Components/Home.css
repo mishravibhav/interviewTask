@@ -20,7 +20,7 @@
   border: none;
   height: 40px;
   padding-right: 50px;
-  border-right: 5px solid black;
+  border-right: 5px solid rgb(102, 101, 101);
 }
 
 .search__button {
@@ -28,7 +28,7 @@
 }
 
 .Job_Card {
-  height: 250px;
+  height: 300px;
   width: 400px;
   margin-bottom: 80px;
 }
@@ -40,6 +40,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 .Jobposts__img {
@@ -53,4 +54,8 @@
 
 .Jobposts__desc {
   margin: 20px 0px 0px 20px;
+  text-decoration: none;
+}
+.search__input{
+  outline: none
 }
