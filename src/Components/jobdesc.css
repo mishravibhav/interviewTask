@@ -4,6 +4,11 @@
   padding: 40px 100px 40px 100px;
   margin-top: 80px;
 }
+
+.darkMode{
+    background-color: rgb(32, 29, 29);
+  color: white;
+}
 .company__info {
   width: 60%;
   margin-left: 20%;

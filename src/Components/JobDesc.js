@@ -7,7 +7,7 @@ function JobDesc(props) {
   var value = location.pathname.split("/");
 
   var desc = props.props.filter((item) => item.id == value[2]);
-  console.log(desc[0].description);
+  console.log(props);
 
   const msToTime = (duration) => {
     var milliseconds = parseInt((duration % 1000) / 100),
@@ -37,7 +37,7 @@ function JobDesc(props) {
 
   return (
     <div>
-      <div className="card shadow company__info">
+      <div className={props.Mode ? "card shadow company__info darkMode":"card shadow company__info"}>
         <div>
           <img className="company__info__left" src={desc[0].company_logo} />
         </div>
@@ -53,7 +53,7 @@ function JobDesc(props) {
           </button>
         </div>
       </div>
-      <div className="card shadow jobdesc">
+      <div className={props.Mode ?"card shadow jobdesc darkMode":"card shadow jobdesc"}>
         <div className="job__info">
           <div>
             <div style={{ display: "flex", flexDirection: "row" }}>

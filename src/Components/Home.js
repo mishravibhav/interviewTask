@@ -7,7 +7,7 @@ import RoomIcon from "@material-ui/icons/Room";
 import { Link } from "react-router-dom";
 
 function Home(props) {
-    // console.log(props);
+  console.log(props.Mode);
 
   const [Data, setData] = useState([]);
   const [Search, setSearch] = useState("");
@@ -91,7 +91,7 @@ function Home(props) {
             <input
               className="search__input"
               type="text"
-              placeholder="Search by title, companies, expertise"
+              placeholder="Filter By Location"
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
@@ -117,36 +117,33 @@ function Home(props) {
 
       <div className="Jobposts">
         {Data.map((item) => (
-          
-
-            <div className="Job_Card card shadow">
-              <div>
-                <img className="Jobposts__img" src={item.company_logo} />
-              </div>
-              <div className="Jobposts__desc">
-                <div style={{ display: "flex", flexDirection: "row" }}>
-                  <p style={{ color: "grey", fontSize: "20px" }}>
-                    {msToTime(Date.now() - Date.parse(item.created_at))}
-                  </p>
-                  <p style={{ color: "grey", fontSize: "10px", margin: "7px" }}>
-                    ⚫
-                  </p>
-                  <p style={{ color: "grey", fontSize: "20px" }}>{item.type}</p>
-                </div>
-                <Link to={`/Jobdesc/${item.id}`} key={item.id} style={{textDecoration:"none"}} >
-                <h4>{item.title}</h4>
-                </Link>
-                <p
-                  style={{ color: "grey", fontSize: "20px", marginTop: "15px" }}
-                >
-                  {item.company}
-                </p>
-                <p style={{ color: "blue", fontSize: "20px" }}>
-                  {item.location}
-                </p>
-              </div>
+          <div className={props.Mode ? "Job_Card card shadow Darkmode" : "Job_Card card shadow"}>
+            <div>
+              <img className="Jobposts__img" src={item.company_logo} />
             </div>
-          
+            <div className="Jobposts__desc">
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <p style={{ color: "grey", fontSize: "20px" }}>
+                  {msToTime(Date.now() - Date.parse(item.created_at))}
+                </p>
+                <p style={{ color: "grey", fontSize: "10px", margin: "7px" }}>
+                  ⚫
+                </p>
+                <p style={{ color: "grey", fontSize: "20px" }}>{item.type}</p>
+              </div>
+              <Link
+                to={`/Jobdesc/${item.id}`}
+                key={item.id}
+                style={{ textDecoration: "none"}}
+              >
+                <h4>{item.title}</h4>
+              </Link>
+              <p style={{ color: "grey", fontSize: "20px", marginTop: "15px" }}>
+                {item.company}
+              </p>
+              <p style={{ color: "blue", fontSize: "20px" }}>{item.location}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>

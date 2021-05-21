@@ -48,7 +48,7 @@ function App() {
           </Route>
 
           <Route path="/Jobdesc">
-            <JobDesc props={Data} />
+            <JobDesc props={Data} Mode={dark} />
           </Route>
         </Switch>
       </div>
