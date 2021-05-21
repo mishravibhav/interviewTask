@@ -133,7 +133,7 @@ function Home(props) {
                   </p>
                   <p style={{ color: "grey", fontSize: "20px" }}>{item.type}</p>
                 </div>
-                <Link to={`/Jobdesc/${item.id}` } key={item.id} >
+                <Link to={`/Jobdesc/${item.id}`} key={item.id} style={{textDecoration:"none"}} >
                 <h4>{item.title}</h4>
                 </Link>
                 <p

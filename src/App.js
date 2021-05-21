@@ -29,7 +29,7 @@ function App() {
       <div className={dark ? "App dark__mode" : "App"}>
         <div className="Navbar">
           <div className="Navbar__Items">
-            <Link to="/">
+            <Link style={{textDecoration:"none"}} to="/">
               <div className="Logo">devjobs</div>
             </Link>
 
